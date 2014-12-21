@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>donuts</title>
+		<meta name="description" content="">
+		<meta name="author" content="Sam">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<script src="D3/angular-d3.js"></script>
+		<script src="js/angular.js"></script>
+		<script src="js/d3.js"></script>
+		<script src="js/nv.d3.js"></script>
+		<link rel="stylesheet" href="style/styles.css" />
+		<script src="dist/angularjs-nvd3-directives.js"></script>
+	</head>
+
+	<body ng-app='homeApp'>
+
+		<div ng-controller="donutCtrl">
+			<div id ="float">
+
+				
+			</div>
+			<div id ="float">
+
+				<nvd3-pie-chart
+				data="donutData"
+				id="donutC"
+				showLabels="false"
+				x=""
+				y="yFunc()"
+				donut="true"
+				donutRatio=".45"
+				color = colorFunction2();
+				donutLabelsOutside="true"
+				ng-click="refresh()">
+					<svg height="270"></svg>
+				</nvd3-pie-chart>
+			</div>
+
+			<div id ="float">
+
+				<nvd3-pie-chart
+				data="donutData"
+				id="donutC2"
+				showLabels="false"
+				x=""
+				y="yFunc()"
+				donut="true"
+				donutRatio=".45"
+				color = colorFunction3();
+				donutLabelsOutside="true"
+				ng-click="refresh()">
+					<svg height="270"></svg>
+				</nvd3-pie-chart>
+			</div>
+			<div id ="float">
+
+				<nvd3-pie-chart
+				data="donutData"
+				id="donutC3"
+				showLabels="false"
+				x=""
+				y="yFunc()"
+				donut="true"
+				donutRatio=".45"
+				color = colorFunction4();
+				donutLabelsOutside="true"
+				ng-click="refresh()">
+					<svg height="270"></svg>
+				</nvd3-pie-chart>
+			</div>
+			<div id ="float">
+
+				<nvd3-pie-chart
+				data="donutData"
+				id="donutC4"
+				showLabels="false"
+				x=""
+				y="yFunc()"
+				donut="true"
+				donutRatio=".45"
+				color = colorFunction5();
+				donutLabelsOutside="true"
+				ng-click="refresh()">
+					<svg height="270"></svg>
+				</nvd3-pie-chart>
+			</div>
+			<div id ="float">
+
+				<nvd3-pie-chart
+				data="donutData"
+				id="donutC5"
+				showLabels="false"
+				x=""
+				y="yFunc()"
+				donut="true"
+				donutRatio=".45"
+				color = colorFunction6();
+				donutLabelsOutside="true"
+				ng-click="refresh()">
+					<svg height="270"></svg>
+				</nvd3-pie-chart>
+			</div>
+			<div id ="float">
+
+				<nvd3-pie-chart
+				data="donutData"
+				id="donutC1"
+				showLabels="false"
+				x=""
+				y="yFunc()"
+				donut="true"
+				donutRatio=".45"
+				color = colorFunction();
+				donutLabelsOutside="true"
+				ng-click="refresh()">
+					<svg height="270"></svg>
+				</nvd3-pie-chart>
+			</div>
+
+		</div>
+
+		<script src="app.js"></script>
+
+	</body>
+
+</html>

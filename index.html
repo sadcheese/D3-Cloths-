@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>index</title>
+		<meta name="description" content="">
+		<meta name="author" content="Sam">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+		<link rel="stylesheet" href="style/styles.css" />
+		<script src="js/angular-route.js"></script>
+		<script src="D3/angular-d3.js"></script>
+		<script src="js/angular.js"></script>
+		<script src="js/d3.js"></script>
+		<script src="js/nv.d3.js"></script>
+		<script src="app.js"></script>
+		<script src="dist/angularjs-nvd3-directives.js"></script>
+		<link rel="stylesheet" href="style/styles.css" />
+	</head>
+
+	<body ng-app='homeApp'>
+		<div ng-controller="mainCtrl">
+
+			<nav >
+
+				<a href="index.html">Home</a>
+
+			</nav>
+			<div id="row1">
+
+				<div id ="person">
+					<img src="img/sam.jpg" id = "circle"/>
+					<h1> Samuel Okoro</h1>
+					<br />
+					<a id ="rand" href =""ng-click="refresh()"> Randomize </a>
+				</div>
+				<div id="donut">
+					<!--	<div id ="float"ng-repeat ="item in [1,2,3,4,5,6,7,8]">
+					-->
+					<nvd3-pie-chart
+					data="donutData"
+					id="donutCirc"
+					showLabels="false"
+					x=""
+					y="yFunc()"
+					donut="true"
+					donutRatio=".45"
+
+					donutLabelsOutside="true"
+					ng-click="refresh()"
+					>
+					<svg height="320" width="100%"></svg>
+					</nvd3-pie-chart>
+					</div>
+					</div>
+					<div id="row2">
+					<div id="writtenData" >
+					<p ng-repeat="item in [0,1,2,3,4,5]">
+					No. of  {{clothes[item]}} <span id ="number">{{writtenData[item]}} </span>
+					</p>
+					</div>
+
+					<div id="graphed">
+			
+				</div>
+			</div>
+
+			<footer>
+				<p>
+					&copy; Copyright  by Sam Okoro
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
